@@ -101,7 +101,7 @@ DATABASES = {
 
         'PASSWORD': 'VitaminC3#',
 
-        'HOST': 'atxfloods-dev-database.cdduygz6mfbn.us-east-1.rds.amazonaws.com',
+        'HOST': 'atxfloods-database-postgres.cdduygz6mfbn.us-east-1.rds.amazonaws.com',
 
         'PORT': '5432',
 
