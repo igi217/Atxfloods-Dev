@@ -601,7 +601,7 @@ def closures(request):
     return JsonResponse({'total': closures.count(), 'status': 200, 'data': closures_json}, safe=False)
 
 
-# @auth
+@auth
 def cameras(request):
     cameras = Camera.objects.filter((Q(jurisdiction__icontains=request.user.jurisdiction if request.user.jurisdiction != "all" else "")) | Q(display_status=False)).order_by('id')
     per_page = request.GET.get('per_page') or cameras.count()
