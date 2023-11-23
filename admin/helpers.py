@@ -377,7 +377,7 @@ def auth(f):
 
 def parse_camera_images(camera_id, max_limit=0):
     query = "SELECT * FROM admin_image WHERE camera_id=%s ORDER BY id DESC LIMIT %s"
-    params = [camera_id, max_limit]
+    params = [camera_id, abs(max_limit)]
     images = Image.objects.raw(query, params)
     data = []
     for index, image in enumerate(images):
